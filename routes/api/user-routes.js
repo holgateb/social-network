@@ -14,13 +14,13 @@ const {
 
 // /api/user
 router.route('/')
-.get(getUsers),
-.post(createUser),
+.get(getUsers)
+.post(createUser);
 
 // /api/user:userID
 router.route('/:userID')
-.get(getSingleUser),
-.put(updateUser),
+.get(getSingleUser)
+.put(updateUser)
 .delete(deleteUser);
 
 // /api/users/:userId/friends/:friendId
