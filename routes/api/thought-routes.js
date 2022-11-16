@@ -1,4 +1,4 @@
-const router = require('express'.).router();
+const router = require('express').router();
 
 const {
     createThought,
@@ -13,7 +13,7 @@ const {
 // /api/thoughts
 
 router.route('/')
-.get(getThoughts)
+.get(getThought)
 .post(createThought);
 
 // /api/thoughts/:thoughtId
@@ -25,6 +25,12 @@ router.route('/:thoughtId')
 
 // /api/thoughts/:thoughtId/reactions
 
+router.route('/:thoughtId/reactions')
+.put(addReaction)
+
 // /api/thoughts/:thoughtId/reactionsId
+
+router.route('/:thoughtId/reactionsId')
+.delete(removeReaction)
 
 module.exports = router;
