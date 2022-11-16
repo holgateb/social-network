@@ -32,4 +32,4 @@ router.route('/:userId/friends/:friendId')
 .post(addFriend)
 .delete(removeFriend);
 
-modeule.exports = router;
+module.exports = router;
