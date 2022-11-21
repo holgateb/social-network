@@ -10,16 +10,15 @@ const {
     getSingleUser,
     addFriend,
     removeFriend,
-
 } = require('../../controllers/user-controller')
 
-// /api/user
+// /api/users
 
 router.route('/')
 .get(getUser)
 .post(createUser);
 
-// /api/user:userID
+// /api/users:userID
 
 router.route('/:userID')
 .get(getSingleUser)
